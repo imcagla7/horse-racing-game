@@ -29,11 +29,13 @@ export default {
                     <p class="track-text">{{ track }}</p>
                 </td>
                 <td :style="{
-                    position: 'relative',
-                    left: (raceSchedule[raceRound - 1]?.horses[track - 1]?.distance / raceLength) * 95 + '%'
+
                 }">
-                    <img :style="{ width: '30px', backgroundColor: raceSchedule[raceRound - 1]?.horses[track - 1]?.color }"
-                        src="../assets/horse.svg" alt="horse-icon" />
+                    <img :style="{
+                        position: 'relative',
+                        left: (raceSchedule[raceRound - 1]?.horses[track - 1]?.distance / raceLength) * 100 + '%', width: '30px',
+                        backgroundColor: raceSchedule[raceRound - 1]?.horses[track - 1]?.color
+                    }" src="../assets/horse.svg" alt="horse-icon" />
                 </td>
             </tr>
         </tbody>
